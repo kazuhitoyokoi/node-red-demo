@@ -1,1 +1,104 @@
-[]
+[
+    {
+        "id": "803a72b022a314b2",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6044b95bbf83031c",
+        "type": "group",
+        "z": "803a72b022a314b2",
+        "name": "",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "26599a9e3453dcf1"
+        ],
+        "x": 154,
+        "y": 179,
+        "w": 212,
+        "h": 82
+    },
+    {
+        "id": "1c890a0d92faa5a0",
+        "type": "global-config",
+        "name": "global-config",
+        "env": []
+    },
+    {
+        "id": "3d454360f9d2de26",
+        "type": "inject",
+        "z": "803a72b022a314b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "26599a9e3453dcf1"
+            ]
+        ]
+    },
+    {
+        "id": "4f66010aff34cd64",
+        "type": "debug",
+        "z": "803a72b022a314b2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "26599a9e3453dcf1",
+        "type": "change",
+        "z": "803a72b022a314b2",
+        "g": "6044b95bbf83031c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "USER",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "4f66010aff34cd64"
+            ]
+        ]
+    }
+]
